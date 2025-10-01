@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assignment-2</title>
+    <meta name="description" content="Responsive website built with HTML & Tailwind CSS" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--- Font awesome -->
+    <script src="https://kit.fontawesome.com/dc7e494e47.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="logo/newspaper_indigo.svg" type="image/x-icon">
+</head>
+
+<body class="text-gray-800 bg-gray-50">
+    <!-- HEADER / NAV -->
+    <header class="sticky top-0 z-40 bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="#" class="flex items-center gap-3">
+                    <img src="logo/newspaper_indigo.svg" alt="">
+
+                    <span class="font-bold text-lg tracking-tight">Shoply</span>
+                </a>
+
+                <!-- desktop menu -->
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="#home" class="text-sm hover:text-indigo-600">Home</a>
+                    <a href="#products" class="text-sm hover:text-indigo-600">Products</a>
+                    <a href="#reviews" class="text-sm hover:text-indigo-600">Reviews</a>
+                    <a href="#contact" class="text-sm hover:text-indigo-600">Contact</a>
+                    <button
+                        class="ml-4 inline-flex items-center px-4 py-2 bg-indigo-600 text-white text-sm rounded-lg hover:shadow-lg">Login</button>
+                </nav>
+
+                <!-- mobile hamburger using checkbox + peer -->
+                <div class="md:hidden">
+                    <input id="nav-toggle" type="checkbox" class="peer hidden" />
+                    <label for="nav-toggle" class="cursor-pointer p-2 rounded-md border border-gray-200">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+                    <!-- sliding mobile panel -->
+                    <div
+                        class="fixed inset-x-4 top-20 rounded-md bg-white shadow-lg transform scale-95 opacity-0 pointer-events-none transition-all duration-200 peer-checked:opacity-100 peer-checked:scale-100 peer-checked:pointer-events-auto md:hidden">
+                        <div class="py-4 px-6 flex flex-col gap-3">
+                            <a href="#home" class="block">Home</a>
+                            <a href="#products" class="block">Products</a>
+                            <a href="#reviews" class="block">Reviews</a>
+                            <a href="#contact" class="block">Contact</a>
+                            <a href="#"
+                                class="mt-2 inline-block text-center bg-indigo-600 text-white px-4 py-2 rounded">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="home">
+        <!-- HERO -->
+        <section class="relative overflow-hidden">
+            <div
+                class="relative h-[60vh] sm:h-[60vh] md:h-[70vh] relative h-[60vh] sm:h-[60vh] md:h-[70vh] bg-[url(img/banner1.1.jpg)]  bg-no-repeat bg-cover bg-center flex items-center text-white">
+                <div class="max-w-4xl mx-auto text-center px-6">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">Quality Products,
+                        Delivered Fast</h1>
+                    <p class="mt-4 text-sm sm:text-base max-w-2xl mx-auto">Discover our latest collection. High quality,
+                        affordable prices, and fast shipping. Shop with confidence.</p>
+                    <div class="mt-6 flex justify-center gap-4">
+                        <a href="#products"
+                            class="px-6 py-3 bg-white text-indigo-600 rounded-lg font-medium hover:shadow-lg">Shop
+                            Now</a>
+                        <a href="#about" class="px-6 py-3 border border-white rounded-lg font-medium">Learn More</a>
+                    </div>
+                </div>
+            </div>    
+
+        </section>
+
+        <!-- PRODUCTS -->
+        <section id="products" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h2 class="text-2xl font-bold">Popular Products</h2>
+                    <p class="text-sm text-gray-500">Hand-picked items for you.</p>
+                </div>
+                <a href="#" class="text-sm text-indigo-600 hover:underline">View all</a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 9 Product Cards -->
+                <article
+                    class="bg-white rounded-2xl shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product1/600/400" alt="Product 1"
+                        class="w-full h-44 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">Product 1</h3>
+                        <p class="mt-2 text-sm text-gray-500">A short description of product 1 that highlights its main
+                            features.</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="text-lg font-bold">$45</div>
+                            <button class="px-3 py-1 bg-indigo-600 text-white rounded hover:shadow">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white rounded-2xl shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product2/600/400" alt="Product 2"
+                        class="w-full h-44 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">Product 2</h3>
+                        <p class="mt-2 text-sm text-gray-500">A short description of product 2 with useful details.</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="text-lg font-bold">$50</div>
+                            <button class="px-3 py-1 bg-indigo-600 text-white rounded hover:shadow">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white rounded-2xl shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product3/600/400" alt="Product 3"
+                        class="w-full h-44 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">Product 3</h3>
+                        <p class="mt-2 text-sm text-gray-500">A short description of product 3 that focuses on benefits.
+                        </p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="text-lg font-bold">$55</div>
+                            <button class="px-3 py-1 bg-indigo-600 text-white rounded hover:shadow">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white rounded-2xl shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product4/600/400" alt="Product 4"
+                        class="w-full h-44 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">Product 4</h3>
+                        <p class="mt-2 text-sm text-gray-500">A short description of product 4 with features list.</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="text-lg font-bold">$60</div>
+                            <button class="px-3 py-1 bg-indigo-600 text-white rounded hover:shadow">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white rounded-2xl shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product5/600/400" alt="Product 5"
+                        class="w-full h-44 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">Product 5</h3>
+                        <p class="mt-2 text-sm text-gray-500">A short description of product 5 that highlights quality.
+                        </p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="text-lg font-bold">$65</div>
+                            <button class="px-3 py-1 bg-indigo-600 text-white rounded hover:shadow">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white rounded-2xl shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product6/600/400" alt="Product 6"
+                        class="w-full h-44 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">Product 6</h3>
+                        <p class="mt-2 text-sm text-gray-500">A short description of product 6 focused on usability.</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="text-lg font-bold">$70</div>
+                            <button class="px-3 py-1 bg-indigo-600 text-white rounded hover:shadow">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white rounded-2xl shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product7/600/400" alt="Product 7"
+                        class="w-full h-44 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">Product 7</h3>
+                        <p class="mt-2 text-sm text-gray-500">A short description of product 7 that emphasizes value.
+                        </p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="text-lg font-bold">$75</div>
+                            <button class="px-3 py-1 bg-indigo-600 text-white rounded hover:shadow">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white rounded-2xl shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product8/600/400" alt="Product 8"
+                        class="w-full h-44 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">Product 8</h3>
+                        <p class="mt-2 text-sm text-gray-500">A short description of product 8 that mentions materials.
+                        </p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="text-lg font-bold">$80</div>
+                            <button class="px-3 py-1 bg-indigo-600 text-white rounded hover:shadow">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white rounded-2xl shadow-sm hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 overflow-hidden">
+                    <img src="https://picsum.photos/seed/product9/600/400" alt="Product 9"
+                        class="w-full h-44 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">Product 9</h3>
+                        <p class="mt-2 text-sm text-gray-500">A short description of product 9 with a benefit statement.
+                        </p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="text-lg font-bold">$85</div>
+                            <button class="px-3 py-1 bg-indigo-600 text-white rounded hover:shadow">Buy Now</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- REVIEWS -->
+        <section id="reviews" class="bg-white border-t py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl font-bold mb-4">What our customers say</h2>
+                <p class="text-sm text-gray-500 mb-8">Real feedback from our happy customers.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-sm">
+                        <div class="flex items-center gap-4">
+                            <img src="https://i.pravatar.cc/64?img=11" alt="avatar" class="h-12 w-12 rounded-full" />
+                            <div>
+                                <div class="font-semibold">Rafiq Ahmed</div>
+                                <div class="text-xs text-yellow-500">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-600">Great quality and fast delivery. The product exceeded my
+                            expectations — highly recommended!</p>
+                    </div>
+
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-sm">
+                        <div class="flex items-center gap-4">
+                            <img src="https://i.pravatar.cc/64?img=22" alt="avatar" class="h-12 w-12 rounded-full" />
+                            <div>
+                                <div class="font-semibold">Lina Khan</div>
+                                <div class="text-xs text-yellow-500">★★★★☆</div>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-600">Good value for money. Customer support was helpful when I
+                            had a question.</p>
+                    </div>
+
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-sm">
+                        <div class="flex items-center gap-4">
+                            <img src="https://i.pravatar.cc/64?img=33" alt="avatar" class="h-12 w-12 rounded-full" />
+                            <div>
+                                <div class="font-semibold">Junaid</div>
+                                <div class="text-xs text-yellow-500">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-600">Fast shipping and the packaging was perfect. Will order
+                            again.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER CTA -->
+        <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="bg-indigo-600 rounded-2xl p-8 md:p-12 text-white flex flex-col md:flex-row items-center gap-6">
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold">Join our newsletter</h3>
+                    <p class="mt-2 text-sm opacity-90">Get exclusive offers, product drops and updates. No spam,
+                        unsubscribe anytime.</p>
+                </div>
+                <form class="w-full md:w-auto flex gap-3">
+                    <input type="email" placeholder="Your email"
+                        class="px-4 py-3 rounded-lg text-gray-800 w-full md:w-80 bg-white" />
+                    <button class="px-4 py-3 bg-white text-indigo-600 font-semibold rounded-lg">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h2 class="text-2xl font-bold">Contact Information</h2>
+                    <p class="mt-2 text-sm text-gray-500">We're happy to hear from you. Reach out using the details
+                        below or send us a message.</p>
+
+                    <div class="mt-6 space-y-4">
+                        <div class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 mt-1"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8m-18 8h18V8" />
+                            </svg>
+                            <div>
+                                <div class="text-sm font-semibold">Address</div>
+                                <div class="text-sm text-gray-500">123 Market Street, Dhaka, Bangladesh</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 mt-1"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M16 12a4 4 0 1 0-8 0v4h8v-4z" />
+                            </svg>
+                            <div>
+                                <div class="text-sm font-semibold">Email</div>
+                                <div class="text-sm text-gray-500">support@shoply.example</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 mt-1"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 5a2 2 0 0 1 2-2h3.28a1 1 0 0 1 .94.66L11 7h6a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H6a3 3 0 0 1-3-3V5z" />
+                            </svg>
+                            <div>
+                                <div class="text-sm font-semibold">Phone</div>
+                                <div class="text-sm text-gray-500">+880 1234 567890</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold">Send us a message</h3>
+                    <form class="mt-4 space-y-4">
+                        <div>
+                            <label class="text-sm">Name</label>
+                            <input type="text" class="mt-1 block w-full rounded-md px-3 py-2 border border-gray-200"
+                                placeholder="Your name" />
+                        </div>
+                        <div>
+                            <label class="text-sm">Email</label>
+                            <input type="email" class="mt-1 block w-full rounded-md px-3 py-2 border border-gray-200"
+                                placeholder="you@example.com" />
+                        </div>
+                        <div>
+                            <label class="text-sm">Message</label>
+                            <textarea class="mt-1 block w-full rounded-md px-3 py-2 border border-gray-200" rows="4"
+                                placeholder="Write your message..."></textarea>
+                        </div>
+                        <div>
+                            <button class="px-4 py-2 bg-indigo-600 text-white rounded-lg">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-200 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-500" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M3 7v10a2 2 0 0 0 2 2h14V5H5a2 2 0 0 0-2 2z" />
+                        </svg>
+                        <span class="font-bold text-lg">Shoply</span>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-400">© 2025 Shoply. All rights reserved.</p>
+                </div>
+
+                <div class="flex gap-12">
+                    <div>
+                        <div class="font-semibold">Quick links</div>
+                        <ul class="mt-2 space-y-1 text-sm text-gray-400">
+                            <li><a href="#home" class="hover:text-white">Home</a></li>
+                            <li><a href="#about" class="hover:text-white">About</a></li>
+                            <li><a href="#contact" class="hover:text-white">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="font-semibold">Follow us</div>
+                        <div class="mt-2 flex gap-3">
+                            <a href="#" aria-label="Twitter" class="p-2 rounded bg-gray-800 hover:bg-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M22 5.92c-.68.3-1.4.52-2.17.62a3.8 3.8 0 0 0 1.67-2.1 7.69 7.69 0 0 1-2.43.93 3.83 3.83 0 0 0-6.53 3.49A10.88 10.88 0 0 1 3.16 4.6a3.82 3.82 0 0 0 1.18 5.11c-.57-.02-1.11-.17-1.58-.43v.04a3.83 3.83 0 0 0 3.07 3.75c-.46.13-.95.16-1.45.06a3.84 3.84 0 0 0 3.58 2.66A7.7 7.7 0 0 1 2 19.54a10.86 10.86 0 0 0 5.9 1.73c7.08 0 10.95-5.87 10.95-10.95v-.5A7.76 7.76 0 0 0 22 5.92z" />
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Facebook" class="p-2 rounded bg-gray-800 hover:bg-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M22 12.07C22 6.48 17.52 2 12 2S2 6.48 2 12.07c0 4.99 3.66 9.12 8.44 9.95v-7.04H7.9v-2.91h2.53V9.41c0-2.5 1.49-3.88 3.76-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.77-1.61 1.56v1.88H17l-.4 2.91h-2.6v7.04C18.34 21.19 22 17.06 22 12.07z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
